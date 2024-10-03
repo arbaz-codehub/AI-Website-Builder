@@ -1,0 +1,358 @@
+/* import your fonts here. */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Lemon&family=Pacifico&family=Permanent+Marker&family=Poppins:wght@600&family=Quicksand:wght@400;500;700&family=Rubik+Doodle+Shadow&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    user-select: none;
+}
+
+:root {
+    --primary-color: rgb(88, 165, 81);
+    --secondary-color: rgb(228, 43, 71);
+}
+
+body,html {
+    width: 100%;
+    height: 100%;
+}
+
+body::-webkit-scrollbar {
+    display: none; 
+}
+
+/* Utility properties */
+.flex {
+    display: flex;
+}
+.column {
+    flex-direction: column;
+}
+.center {
+    justify-content: center;
+    align-items: center;
+}
+.h-center {
+    justify-content: center;
+}
+.v-center {
+    align-items: center;
+}
+.t-center {
+    text-align: center;
+}
+.t-left {
+    text-align: left;
+}
+.t-right {
+    text-align: right;
+}
+.t-justify {
+    text-align: justify;
+}
+/* +---------------------Fonts---------------------+ */
+.f1 {
+    font-family: 'Permanent Marker';
+}
+.f2 {
+    font-family: 'Dancing Script';
+}
+.f3 {
+    font-family: 'Quicksand';
+}
+/* +---------------------Border---------------------+ */
+.border {
+    border: 1px solid black;
+}
+.b-top {
+    border-top: 1px solid #000;
+}
+.b-right {
+    border-right: 1px solid #000;
+}
+.b-bottom {
+    border-bottom: 1px solid #000;
+}
+.b-left {
+    border-left: 1px solid #000;
+}
+/* +---------------------Text Colors---------------------+ */
+.t-black {
+    color: black;
+}
+.t-white {
+    color: white;
+}
+.t-pink {
+    color: rgb(255, 141, 160);
+}
+.t-coral {
+    color: lightcoral;
+}
+.t-red {
+    color: red;
+}
+.t-grey {
+    color: rgba(0, 0, 0, 0.6);
+}
+.t-lightblue {
+    color: rgb(106, 215, 252);
+}
+.t-blue {
+    color: rgb(9, 132, 173);
+}
+
+/* +-----------------Header Section-----------------+ */
+header {
+    height: 60px;
+    justify-content: space-between;
+    padding-inline: 20px;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+.logo {
+    height: 40px;
+    line-height: 40px;
+    font-size: 1.8rem;
+    margin: 0 20px;
+}
+.theme {
+    height: 25px;
+    width: 25px;
+    margin: 0 20px;
+}
+.moon {
+    background-image: url(./moon.png);
+    background-size: 100% 100%;
+}
+.l-moon {
+    background-image: url(./l-moon.png);
+    background-size: 100% 100%;
+}
+
+
+/* +-----------------Main Section-----------------+ */
+main {
+    width: 100%;
+    height: 100vh;
+    padding-inline: 20px;
+    padding-top: 80px;
+    gap: 10px;
+}
+
+.h-code, .m-code, .f-code {
+    gap: 20px;
+}
+
+.h-box, .m-box, .f-box {
+    gap: 40px;
+}
+.box1, .box2, .box3 {
+    border: 1px solid black;
+    border-radius: 5px;
+}
+.box1, .box2, .box3:hover {
+    cursor: pointer;
+}
+ .box1.selected1 {
+    border: 2px solid rgb(0, 119, 255);
+  }
+  .box2.selected2 {
+    border: 2px solid rgb(204, 0, 255);
+  }
+  .box3.selected3 {
+    border: 2px solid rgb(255, 102, 0);
+  }
+.h-box > .box1 {
+    width: 25%;
+    height: 80px;
+}
+
+.m-box > .box2 {
+    width: 40%;
+    height: 350px;
+}
+
+.f-box > .box3 {
+    width: 70%;
+    height: 250px;
+    margin-bottom: 60px;
+}
+
+.btn-group {
+    justify-content: space-around;
+}
+.generate-btn, .preview-btn, .download-btn {
+    padding: 20px 30px;
+    height: 30px;
+    margin-bottom: 40px;
+    font-size: 16px;
+    border-radius: 5px;
+    color: white;
+    background: linear-gradient(110.6deg, rgb(184, 142, 252) 2.2%, rgb(104, 119, 244) 100.2%);
+    background-size: 150% 150%;
+}
+.generate-btn, .preview-btn, .download-btn:hover {
+    cursor: pointer;
+    animation: gradient 3s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+textarea {
+    width: 100%;
+    height: 200px;
+    margin-top: 10px;
+    resize: none;
+}
+
+/* Header All Layout Structure Views */
+.h-Box1, .h-Box2, .h-Box3 {
+    background: linear-gradient(178.6deg, rgb(232, 245, 253) 3.3%, rgb(252, 253, 255) 109.6%);
+} 
+.h-Box1 {
+    padding-inline: 10px;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.hl-menu1 {
+    justify-content: space-between;
+    gap: 10px;
+    padding-top: 8px;
+}
+.m {
+    width: 18px;
+    border: 1px solid black;
+}
+
+.h-Box2 {
+    justify-content: center;
+    align-items: flex-start;
+}
+.hl-menu2 {
+    justify-content: center;
+    gap: 10px;
+    padding-top: 8px;
+}
+.h-Box3 {
+    padding-inline: 10px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 15px;
+}
+.hl-menu3 {
+    justify-content: flex-start;
+    gap: 10px;
+    padding-top: 10px;
+}
+
+/* Main All Layout Structure Views */
+.m-Box1, .m-Box2 {
+    background: linear-gradient(-20deg, #f794a4 0%, #fdd6bd 100%);
+}
+
+.mh1 {
+    width: 70px;
+    border: 2px solid black;
+    margin-bottom: 30px;
+}
+.mh2 {
+    width: 120px;
+    border: 2px solid black;
+    margin-bottom: 20px;
+}
+.ms1 {
+    width: 200px;
+    border: 1px solid black;
+    margin-bottom: 15px;
+}
+.ms2 {
+    width: 300px;
+    border: 1px solid black;
+    margin-bottom: 40px;
+}
+.mb1 {
+    width: 100px;
+    height: 25px;
+    border-radius: 2px;
+    border: 1px solid black;
+    background: rgb(250, 232, 199);
+}
+
+
+.m-Box2 {
+    padding-left: 10px;
+}
+.mleft {
+    justify-content: center;
+    align-items: flex-start;
+    width: 50%;
+}
+.mright {
+    width: 50%;
+}
+.circle {
+    width: 190px;
+    height: 190px;
+    border: 1px solid black;
+    border-radius: 50%;
+    transform: translateX(20px);
+    background: rgb(214, 220, 241);
+}
+
+/* Footer All Layout Structure Views */
+.f-Box1 {
+    background: linear-gradient(109.6deg, rgb(220, 196, 252) 11.2%, rgb(150, 199, 253) 100.2%);
+}
+.fleft, .fright {
+    width: 50%;
+}
+.fleft {
+    gap: 10px;
+}
+.l1, .l2, .l3 {
+    width: 30%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.l1 div {
+    width: 60%;
+    border: 1px solid black;
+}
+.l2 div {
+    width: 60%;
+    border: 1px solid black;
+}
+.l3 div {
+    width: 60%;
+    border: 1px solid black;
+}
+
+.fright {
+    gap: 25px;
+}
+.fh1 {
+    width: 35%;
+}
+.fb1 {
+    width: 50%;
+    height: 40px;
+    border-radius: 3px;
+}

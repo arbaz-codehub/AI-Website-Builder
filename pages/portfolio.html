@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate Portfolio Website</title>
+    <link rel="stylesheet" href="portfolio.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="./portfolio.js" defer></script>
+</head>
+<body>
+    <!-------------------Header Section------------------->
+    <header class="flex v-center">
+        <!-- Logo -->
+        <p class="logo f2"><span class="f1 t-coral">F</span>antasy <span class="t-coral">AI</span></p>
+        <div class="theme moon" id="toggleDark"></div>
+    </header>
+    <!-------------------Main Section------------------->
+    <main class="flex column f3" data-aos="fade-right" data-aos-duration="400">
+        <div class="h-code flex column">
+            <h2 class="h-title">Choose Header</h2>
+            <div class="h-box flex center">
+                <div class="box1 h-Box1 flex">
+                    <!-- Header Layout Structure View 1 -->
+                    <div class="hl-logo">Logo</div>
+                    <div class="hl-menu1 flex">
+                        <div class="m"></div>
+                        <div class="m"></div>
+                        <div class="m"></div>
+                        <div class="m"></div>
+                    </div>
+                </div>
+                <div class="box1 h-Box2">
+                    <!-- Header Layout Structure View 2 -->
+                    <div class="hl-menu2 flex">
+                        <div class="m"></div>
+                        <div class="m"></div>
+                        <div class="m"></div>
+                        <div class="m"></div>
+                    </div>
+                </div>
+                <div class="box1 h-Box3 flex">
+                    <!-- Header Layout Structure View 3 -->
+                    <div class="hl-logo">Logo</div>
+                    <div class="hl-menu3 flex">
+                        <div class="m"></div>
+                        <div class="m"></div>
+                        <div class="m"></div>
+                        <div class="m"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="m-code flex column">
+            <h2 class="m-title">Choose Main Content</h2>
+            <div class="m-box flex center">
+                <div class="box2 m-Box1 flex column center">
+                    <!-- Main Layout Structure View 1 -->
+                    <div class="mh1"></div>
+                    <div class="mh2"></div>
+                    <div class="ms1"></div>
+                    <div class="ms2"></div>
+                    <div class="mb1"></div>
+                </div>
+                <div class="box2 m-Box2 flex">
+                    <!-- Main Layout Structure View 2 -->
+                    <div class="mleft flex column">
+                        <div class="mh1"></div>
+                        <div class="mh2"></div>
+                        <div class="ms1"></div>
+                        <div class="ms2"></div>
+                        <div class="mb1"></div>
+                    </div>
+                    <div class="mright flex center">
+                        <div class="circle"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="f-code flex column">
+            <h2 class="f-title">Choose Footer</h2>
+            <div class="f-box flex center">
+                <div class="box3 f-Box1 flex">
+                    <!-- Footer Layout Structure View 1 -->
+                    <div class="fleft flex center">
+                        <div class="l1">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <div class="l2">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <div class="l3">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                    </div>
+                    <div class="fright flex center column">
+                        <div class="fh1 border"></div>
+                        <div class="fb1 border"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="btn-group flex">
+            <button class="generate-btn border flex center" onclick="GenerateCode()">Generate</button>
+            <button class="preview-btn border flex center" onclick="PreviewCode()">Preview</button>
+            <button class="download-btn border flex center" onclick="DownloadCode()">Download</button>
+        </div>
+
+        <div id="codeOutput" style="display: none;">
+            <textarea id="gHtmlCode" readonly></textarea>
+            <textarea id="gCssCode" readonly></textarea>
+        </div>
+    </main>
+
+    <script>
+        // Dark Theme / Light Theme Toggle
+        const toggle = document.getElementById('toggleDark');
+        const body = document.querySelector('body');
+
+        toggle.addEventListener('click', function(){
+            this.classList.toggle('l-moon');
+            if(this.classList.toggle('moon')){
+                body.style.background = 'white';
+                body.style.color = 'black';
+                body.style.transition = '2s';
+            }else{
+                body.style.background = '#17171A';
+                body.style.color = 'white';
+                body.style.transition = '2s';
+            }
+        });
+    </script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        // JavaScript code for Responsive Menu
+        document.addEventListener('DOMContentLoaded', function() {
+            const checkbox = document.getElementById('check');
+            const menu = document.querySelector('.menu');
+
+            checkbox.addEventListener('change', function() {
+                if (checkbox.checked) {
+                    menu.classList.add('show-menu');
+                } else {
+                    menu.classList.remove('show-menu');
+                }
+            });
+        });
+
+        // JavaScript Code for AOS Initialization
+        AOS.init({
+            delay: 300,
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fantasy AI</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!-------------------Header Section------------------->
+    <header class="flex v-center">
+        <!-- Logo -->
+        <p class="logo f2"><span class="f1 t-coral">F</span>antasy <span class="t-coral">AI</span></p>
+        <div class="theme moon" id="toggleDark"></div>
+    </header>
+
+    <main>
+        <section class="section1">
+            <!-- Get Started Section  -->
+            <div class="get-started flex column v-center">
+                <h2 data-aos="fade-up" data-aos-duration="500">Welcome to <span class="pink">FantasyAI</span><br>Where <span class="pink">Dreams </span>Come to Life</h2>
+                <h3 data-aos="fade-up" data-aos-duration="600">Empower Your Imagination with AI Magic</h3>
+                <div class="get-started-button" data-aos="fade-up" data-aos-duration="700">
+                    <div class="button flex">
+                        <img src="magic-wand.png" alt="Magic-Wand">
+                        <h6>Start Your Fantasy Journey</h6>
+                    </div>
+                </div>
+                <div class="webselect flex">
+                    <div class="select-box">
+                        <select id="website-type">
+                          <option value="" disabled selected>Choose your website type</option>
+                          <option value="portfolio">Portfolio website</option>
+                          <option value="ecommerce">Ecommerce website</option>
+                          <option value="blog">Blog website</option>
+                          <!-- Add more options here -->
+                        </select>
+                    </div>
+                    <button id="go-button" class="border" onclick="redirectToSelectedPage()">Go</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        // JavaScript code for Responsive Menu
+        document.addEventListener('DOMContentLoaded', function() {
+            const checkbox = document.getElementById('check');
+            const menu = document.querySelector('.menu');
+
+            checkbox.addEventListener('change', function() {
+                if (checkbox.checked) {
+                    menu.classList.add('show-menu');
+                } else {
+                    menu.classList.remove('show-menu');
+                }
+            });
+        });
+
+        // JavaScript Code for AOS Initialization
+        AOS.init({
+            delay: 300,
+        });
+    </script>
+</body>
+</html>
