@@ -1,5 +1,7 @@
 # AI Website Builder
 
+![Website Builder](project5.png)
+
 ## Overview
 The AI Website Builder is an innovative tool that allows users to create custom websites based on their specific needs. Users can select the type of website they want to generate, such as a portfolio, blog, or e-commerce site. After selecting their preferred layout for various sections (header, body, footer), users can generate the corresponding code, preview it, and download the files for their new website.
 
